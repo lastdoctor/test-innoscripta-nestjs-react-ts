@@ -1,7 +1,11 @@
 import { Action, ActionTypes } from '@store/types/types';
 import { Token } from '@store/actions/authAC';
 
-export const authReducer = (state: Token = {}, action: Action) => {
+const initialState: Token = {
+  accessToken: '',
+};
+
+export const authReducer = (state: Token = initialState, action: Action) => {
   switch (action.type) {
     case ActionTypes.ADD_TOKENS:
       const { accessToken } = action.payload;

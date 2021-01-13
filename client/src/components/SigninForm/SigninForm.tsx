@@ -34,7 +34,6 @@ export function SigninForm() {
   const [form] = Form.useForm();
 
   const onFinish = (values: userState) => {
-    console.log('Received values of form: ', values);
     const newUser = {
       email: values.email,
       password: values.password,

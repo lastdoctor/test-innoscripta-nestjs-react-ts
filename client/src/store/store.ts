@@ -9,13 +9,12 @@ import { rootReducer } from '@store/reducers/rootReducer';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['tokens'],
+  whitelist: ['tokens', 'selectedCurrency', 'card'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = createStore(persistedReducer, composeWithDevTools(applyMiddleware(thunk)));
 
-// @ts-ignore
 const persistor = persistStore(store);
 
 export { store, persistor };

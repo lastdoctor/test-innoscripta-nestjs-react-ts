@@ -3,11 +3,11 @@ import axios from '@src/axios';
 import { ActionTypes } from '@store/types/types';
 
 export interface Pizza {
-  id?: string,
-  title?: string,
-  description?: string,
-  img?: string,
-  priceUsd?: number
+  _id: string,
+  title: string,
+  description: string,
+  img: string,
+  priceUsd: number
 }
 
 export interface RequestPizzaAction {

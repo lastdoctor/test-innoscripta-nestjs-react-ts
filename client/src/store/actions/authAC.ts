@@ -3,7 +3,7 @@ import axios from '@src/axios';
 import { ActionTypes } from '@store/types/types';
 
 export interface Token {
-  accessToken?: string
+  accessToken: string
 }
 
 export interface RequestSignupAction {
